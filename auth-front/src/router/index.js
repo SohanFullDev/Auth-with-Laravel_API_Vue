@@ -1,16 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// router.js
+import { createRouter, createWebHistory } from 'vue-router';
+import HelloWorld from '@/components/HelloWorld.vue';
+import RegisterPage from '@/components/RegisterPage.vue';
 
-Vue.useAttrs(Router)
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+    },
+    {
+      path: '/register',
+      name: 'RegisterPage',
+      component: RegisterPage,
+    },
+  ],
+});
 
-export default  new Router({
-    routes: [
-        {
-            path: '/',
-            name: '',
-            component: 
-
-        }
-    ]
-
-})
+export default router;
